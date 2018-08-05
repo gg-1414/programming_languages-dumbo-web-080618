@@ -40,7 +40,8 @@ def reformat_languages(languages)
       language_data.each do |language, data|
         language_data[language][:style] = [style]
       end 
-    elsif style == :functional 
+    end
+    if style == :functional 
       language_data.each do |language, data|
         if language_data[language][:style].any?
           language_data[language][:style] << style
