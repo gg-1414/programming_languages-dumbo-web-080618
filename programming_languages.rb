@@ -40,7 +40,7 @@ def reformat_languages(languages)
       language_data[language][:style] = []
       if style == :oo
         language_data[language][:style] << style
-      else 
+      elsif style == :functional 
         language_data[language][:style] << style
       end 
 
