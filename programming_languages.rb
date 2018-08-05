@@ -39,7 +39,12 @@ def reformat_languages(languages)
     binding.pry
     language_data.each do |language, data|
       language_data[language][:style] = []
-      
+      if style == :oo
+        language_data[language][:style] << style
+      else 
+        language_data[language][:style] << style
+      end 
+      binding.pry
     end 
 
     new_hash_holder << language_data
