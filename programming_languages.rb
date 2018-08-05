@@ -48,12 +48,6 @@ def reformat_languages(languages)
       new_hash[language][:style] = [style]
     end 
   end 
-    
-  new_hash.each do |language, data|
-    if languages.values.include?(language)
-      
-    end 
-  end 
 end
 
 reformat_languages(languages)
