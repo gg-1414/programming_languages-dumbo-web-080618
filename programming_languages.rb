@@ -41,8 +41,9 @@ def reformat_languages(languages)
       if style == :oo
         language_data[language][:style] = [style]
       end 
+       binding.pry
       if style == :functional 
-        binding.pry
+       
         if language_data[language][:style].values.include?(:oo)
           language_data[language][:style] << style
         else
