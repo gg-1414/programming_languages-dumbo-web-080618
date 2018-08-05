@@ -44,10 +44,10 @@ def reformat_languages(languages)
     end 
     
     new_hash.each do |language, data|
-      binding.pry
       new_hash[language][:style] = [style]
     end 
   end 
+  puts new_hash
 end
 
 reformat_languages(languages)
