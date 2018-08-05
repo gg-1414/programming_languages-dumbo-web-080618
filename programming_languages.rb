@@ -44,8 +44,9 @@ def reformat_languages(languages)
       else 
         language_data[language][:style] << style
       end 
-      binding.pry
+
     end 
+    binding.pry
 
     new_hash_holder << language_data
     new_hash_holder.each do |element|
