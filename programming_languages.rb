@@ -41,16 +41,17 @@ def reformat_languages(languages)
         language_data[language][:style] = [style]
       end 
     end
+    # language_data[:javascript][:style] = [:oo]
     binding.pry
-    # if style == :functional 
-    #   language_data.each do |language, data|
-    #     if language_data[language][:style].any?
-    #       language_data[language][:style] << style
-    #     else
-    #       language_data[language][:style] = style
-    #     end 
-    #   end
-    # end 
+    if style == :functional 
+      language_data.each do |language, data|
+        if language_data[language][:style].any?
+          language_data[language][:style] << style
+        else
+          language_data[language][:style] = style
+        end 
+      end
+    end 
     new_hash_holder << language_data
     new_hash_holder.each do |element|
       element.each do |language, data|
