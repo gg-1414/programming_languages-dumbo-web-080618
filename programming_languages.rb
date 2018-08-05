@@ -36,16 +36,15 @@ def reformat_languages(languages)
   new_hash_holder = [] 
   new_hash = {}
   languages.each do |style, language_data|
-    language_data.each do |language, data|
-      if style == :oo
+    if style == :oo
+      language_data.each do |language, data|
         language_data[language][:style] = [style]
       end 
-      if style == :functional 
-        if language_data[language][:style].any?
-          language_data[language][:style] << style
-        else
-          language_data[language][:style] = style
-        end 
+    elsif style == :functional 
+      if language_data[language][:style].any?
+        language_data[language][:style] << style
+      else
+        language_data[language][:style] = style
       end 
     end 
     new_hash_holder << language_data
