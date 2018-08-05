@@ -45,7 +45,12 @@ def reformat_languages(languages)
     language_data.each do |language, data|
       if languages[:oo].include?(language) && languages[:functional].include?(language)
         language_data[language][:style] = [:oo, :functional]
-      end 
+      elsif style == :oo 
+        language_data[language][:style] = [style]
+      else 
+        language_data[language][:style] = [style]
+      end
+      
     end 
     
     binding.pry
