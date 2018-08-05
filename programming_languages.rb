@@ -39,7 +39,6 @@ def reformat_languages(languages)
     language_data.each do |language, data|
       language_data[language][:style] = []
     end 
-    binding.pry
     new_hash_holder << language_data
     new_hash_holder.each do |element|
       element.each do |language, data|
