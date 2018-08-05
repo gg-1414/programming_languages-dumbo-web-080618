@@ -38,12 +38,14 @@ def reformat_languages(languages)
   languages.each do |style, language_data|
     language_data.each do |language, data|
       language_data[language][:style] = []
-      language_data[language][:style] << style 
+      
     end 
+
     new_hash_holder << language_data
     new_hash_holder.each do |element|
       element.each do |language, data|
         new_hash[language] = data
+        binding.pry
       end 
       # new_hash.each do |language, data|
       #   new_hash[language][:style] << style
