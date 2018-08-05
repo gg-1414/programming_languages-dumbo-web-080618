@@ -42,7 +42,7 @@ def reformat_languages(languages)
         language_data[language][:style] << style
       end 
       if style == :functional 
-        language_data[language][:style] << style
+        language_data[language][:style].push(style)
       end 
 
     end 
