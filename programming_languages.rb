@@ -44,18 +44,12 @@ def reformat_languages(languages)
       if style == :functional 
         language_data[language][:style] << style
       end 
-
     end 
-
     new_hash_holder << language_data
     new_hash_holder.each do |element|
       element.each do |language, data|
         new_hash[language] = data
-        
       end 
-      # new_hash.each do |language, data|
-      #   new_hash[language][:style] << style
-      # end 
     end
   end 
   puts new_hash
