@@ -50,10 +50,7 @@ def reformat_languages(languages)
       else 
         language_data[language][:style] = [style]
       end
-      
     end 
-    
-    binding.pry
     if style == :functional 
       language_data.each do |language, data|
         if language_data[language][:style].any?
